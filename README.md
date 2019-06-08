@@ -15,7 +15,7 @@ There is very little preventing users from using this to mirror pirated content.
 * `/mirrorit <url>` : Download from the given URL and upload it to Google Drive. <url> can be HTTP(S), a BitTorrent magnet, or a HTTP(S) url to a BitTorrent .torrent file. A status message will be shown and updated while downloading.
 * `/mirrorTar <url>` : Same as `/mirror`, but archive multiple files into a tar before uploading it.
 * `/mirroritStatus` : Send a status message about the current download.
-* `/stopMirror` : Cancel the current mirroring task. Only the person who started the task, SUDO_USERS, and chat admins can use this command.
+* `/stopit` : Cancel the current mirroring task. Only the person who started the task, SUDO_USERS, and chat admins can use this command.
 * `/search <filename>` : Send links to downloads with the `filename` substring in the name. In case of too many downloads, only show the most recent few. 
 * `/source` : Sends the source code of the bot
 * `/ping` : Tests the connection with Telegram's API
@@ -86,7 +86,7 @@ There is very little preventing users from using this to mirror pirated content.
 
 9. Start the bot with `npm --max_old_space_size=128 start`
 
-10. Open Telegram, and send `/mirror https://raw.githubusercontent.com/Yash-Garg/telegram-drive-bot/master/README.md` to the bot.
+10. Open Telegram, and send `/mirrorit https://raw.githubusercontent.com/Yash-Garg/telegram-drive-bot/master/README.md` to the bot.
 
 11. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
 
