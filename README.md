@@ -8,7 +8,7 @@ This bot is meant to be used in small, closed groups. So, once deployed, it only
 
 ### Warning
 
-There is very little preventing users from using this to mirror pirated content. Hence, make sure that only trusted groups are whitelisted in `AUTHORIZED_CHATS`.
+There is a little preventing users from using this to mirror pirated content. Hence, make sure that only trusted groups are whitelisted in `AUTHORIZED_CHATS`.
 
 ### Bot commands
 
