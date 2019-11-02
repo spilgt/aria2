@@ -1,19 +1,19 @@
 {
-  "name": "Small Sharp Tool",
+  "name": "Torrent To Gdrive Telegram Bot",
   "description": "This app does one little thing, and does it well.",
   "keywords": [
     "productivity",
     "HTML5",
     "scalpel"
   ],
-  "website": "https://small-sharp-tool.com/",
-  "repository": "https://github.com/jane-doe/small-sharp-tool",
+  "website": "https://google.com/",
+  "repository": "https://github.com/therealme1/aria2",
   "logo": "https://small-sharp-tool.com/logo.svg",
   "success_url": "/welcome",
   "env": {
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": ""
+      "generator": "env"
     }
   },
   "formation": {
