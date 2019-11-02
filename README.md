@@ -57,7 +57,7 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 2. Run `npm install`
 
-3. Configure the aria2 startup script:
+3. Configure the aria2 startup script: <b>YOU Can skip this ive alreday done it</b>
 
    * `nano aria.sh`
    * `ARIA_RPC_SECRET` (defined in line 1) is the secret (password) used to connect to aria2. Set this to whatever you want, and save the file with `ctrl + x`.
