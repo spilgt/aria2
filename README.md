@@ -12,7 +12,7 @@ This bot is meant to be used in small, closed groups. So, once deployed, it only
 
 ### Warning
 
-There is little preventing users from using this to mirror pirated content. Hence, make sure that only trusted groups are whitelisted in `AUTHORIZED_CHATS`.
+There is little preventing users from using this to mirror pirated content. Hence, make sure that only trusted groups are whitelisted in `AUTHORIZED_CHATS` <b>BUT ITS CURRENTLY NOT WORKING!!!!! YOU CAN ONLY USE THE BOT IN PM</b>
 
 ### Bot commands
 
@@ -44,6 +44,7 @@ There is little preventing users from using this to mirror pirated content. Henc
    * The URL will be something like `https://drive.google.com/drive/u/0/folders/012a_345bcdefghijk`. Copy the part after `folders/` (`012a_345bcdefghijk`). This is the `GDRIVE_PARENT_DIR_ID` that you'll need in step 5 of the Installation section.
 
 ### Installation
+( Preferably Do this in termux to get the "credentials.json" it will automatically generate after you enter the code from the url step 10)
 
 1. Clone the repo:
 
@@ -54,24 +55,17 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 2. Run `npm install`
 
-3. Copy the example files:
-
-   ```bash
-   cp .constants.js.example .constants.js
-   cp aria.sh.example aria.sh
-   ```
-
-4. Configure the aria2 startup script:
+3. Configure the aria2 startup script:
 
    * `nano aria.sh`
    * `ARIA_RPC_SECRET` (defined in line 1) is the secret (password) used to connect to aria2. Set this to whatever you want, and save the file with `ctrl + x`.
 
-5. Configure the bot:
+4. Configure the bot:
 
    * `nano .constants.js`
    * Now replace the placeholder values in this file with your values. Use the `Constants description` section below for reference.
 
-6. Set up OAuth:
+5. Set up OAuth:
 
    * Visit the [Google Cloud Console](https://console.developers.google.com/apis/credentials)
    * Go to the OAuth Consent tab, fill it, and save.
@@ -80,19 +74,19 @@ There is little preventing users from using this to mirror pirated content. Henc
    * Use the download button to download your credentials.
    * Move that file to the root of aria-telegram-mirror-bot, and rename it to `client_secret.json`
 
-7. Enable the Drive API:
+6. Enable the Drive API:
 
    * Visit the [Google API Library](https://console.developers.google.com/apis/library) page.
    * Search for Drive.
    * Make sure that it's enabled. Enable it if not.
 
-8. Start aria2 with `./aria.sh`
+7. Start aria2 with `./aria.sh`
 
-9. Start the bot with `npm --max_old_space_size=128 start`
+8. Start the bot with `npm start`
 
-10. Open Telegram, and send `/mirrorit https://raw.githubusercontent.com/Yash-Garg/telegram-drive-bot/master/README.md` to the bot.
+9. Open Telegram, and send `/mirrorit https://raw.githubusercontent.com/therealme1/aria2/master/README.md` to the bot.
 
-11. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
+10. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
 
 That's it.
 
@@ -108,7 +102,7 @@ This is a description of the fields in .constants.js:
 * `ARIA_FILTERED_FILENAMES`: The bot will refuse to completely download (or if already downloaded, then upload) files with any of these substrings in the file/top level directory name. Can be an empty list or left undefined.
 * `GDRIVE_PARENT_DIR_ID`: This is the ID of the Google Drive folder that files will be uploaded into. You will get this from step 4 of Pre-installation.
 * `SUDO_USERS`: This is a list of Telegram user IDs. These users can use the bot in any chat. Can be an empty list, if AUTHORIZED_CHATS is not empty.
-* `AUTHORIZED_CHATS`: This is a list of Telegram Chat IDs. Anyone in these chats can use the bot in that particular chat. Anyone not in one of these chats and not in SUDO_USERS cannot use the bot. Someone in one of the chats in this list can use the bot only in that chat, not elsewhere. Can be an empty list, if SUDO_USERS is not empty.
+* `AUTHORIZED_CHATS`:<b>THIS FUNCTION NEEDS TO BE REPAIRED SO PUT ANYTHING ON THIS!!!!!! IT WONT WORK</b>  This is a list of Telegram Chat IDs. Anyone in these chats can use the bot in that particular chat. Anyone not in one of these chats and not in SUDO_USERS cannot use the bot. Someone in one of the chats in this list can use the bot only in that chat, not elsewhere. Can be an empty list, if SUDO_USERS is not empty.
 * `DOWNLOAD_NOTIFY_TARGET`: The fields here are used to notify an external web server once a download is complete. See the [section below](#Notifying-an-external-webserver-on-download-completion) for details.
    * `enabled`: Set this to `true` to enable this feature.
    * `host`: The address of the web server to notify.
@@ -120,8 +114,7 @@ This is a description of the fields in .constants.js:
 After the initial installation, use these instructions to (re)start the bot.
 
 1. Start aria2 by running `./aria.sh`
-2. Start a new tmux session with `tmux new -s tgbot`, or connect to an existing session with `tmux a -t tgbot`. Running the bot inside tmux will let you disconnect from the server without terminating the bot. You can also use nohup instead.
-3. Start the bot with `npm --max_old_space_size=128 start`
+2. Just start the bot with "npm start"
 
 ### Notifying an external webserver on download completion
 
