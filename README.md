@@ -2,6 +2,10 @@
 
 This is a Telegram bot that uses [aria2](https://github.com/aria2/aria2) to download files over BitTorrent / HTTP(S) and uploads them to your Google Drive. This can be useful for downloading from slow servers. There are some features to try to reduce piracy.
 
+# Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+
 ### Limitations
 
 This bot is meant to be used in small, closed groups. So, once deployed, it only works in whitelisted groups. Also, it does not scale, so only one file can be downloaded at a time. This reduces the load on the server running the bot. Download queuing is planned, but not implemented yet.
