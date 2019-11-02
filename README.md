@@ -52,7 +52,7 @@ There is little preventing users from using this to mirror pirated content. Henc
 
    ```bash
    git clone https://github.com/therealmme1/aria2
-   cd telegram-drive-bot
+   cd aria2
    ```
 
 2. Run `npm install`
