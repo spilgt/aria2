@@ -34,7 +34,9 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 4. Install [aria2](https://github.com/aria2/aria2).
    * For Ubuntu:
-     `sudo apt install aria2`
+     `sudo apt install aria2 node.js npm`
+    * For Termux:
+      `pkg install aria2 nodejs npm`
 
 5. Get Drive folder ID:
 
