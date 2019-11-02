@@ -44,12 +44,12 @@ There is little preventing users from using this to mirror pirated content. Henc
    * The URL will be something like `https://drive.google.com/drive/u/0/folders/012a_345bcdefghijk`. Copy the part after `folders/` (`012a_345bcdefghijk`). This is the `GDRIVE_PARENT_DIR_ID` that you'll need in step 5 of the Installation section.
 
 ### Installation
-( Preferably Do this in termux to get the "credentials.json" it will automatically generate after you enter the code from the url step 10)
+( Preferably Do this in termux to get the `credentials.json` it will automatically generate after you enter the code from the url step 10)
 
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/Yash-Garg/telegram-drive-bot
+   git clone https://github.com/therealmme1/telegram-drive-bot
    cd telegram-drive-bot
    ```
 
@@ -88,7 +88,16 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 10. In the terminal, it'll ask you to visit an authentication URL. Visit it, grant access, copy the code on that page, and paste it in the terminal.
 
-That's it.
+Note:- This will create a file named `credentials.json` which is required in the next step
+
+Let's see the next steps
+
+### Step to make it ready for heroku
+
+After the above installation is done you will see the bot running...now lets make it ready for heroku
+
+1. You will see 2 main files required i.e `client_secret.json` and `credentials.json` these are required to be uploaded on the repo to make gdrive upload work
+2. Run `cp client_secret.json /sdcard/` and `cp credentials.json /sdcard/` You will find the files in internal storage of your phone Now upload them to the github repo and deploy
 
 ### Constants description
 
@@ -114,7 +123,7 @@ This is a description of the fields in .constants.js:
 After the initial installation, use these instructions to (re)start the bot.
 
 1. Start aria2 by running `./aria.sh`
-2. Just start the bot with "npm start"
+2. Just start the bot with `npm start`
 
 ### Notifying an external webserver on download completion
 
