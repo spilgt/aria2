@@ -1,6 +1,6 @@
 module.exports = Object.freeze({
   TOKEN: 'Bot Token Here!', //Telegramm Bot token!
-  ARIA_SECRET: 'therealme1',
+  ARIA_SECRET: 'enter the secret key', //Enter the secret key you entered in `aria.sh` file while editing
   ARIA_DOWNLOAD_LOCATION: '/app/dn', //This is for heroku on termux change it to your directory of cloned repo using "pwd" command
   ARIA_DOWNLOAD_LOCATION_ROOT: '/', //"No need to touch this!" The mountpoint that contains ARIA_DOWNLOAD_LOCATION
   ARIA_FILTERED_DOMAINS: ['yts', 'YTS', 'cruzing.xyz', 'eztv.ag', 'YIFY'], // Prevent downloading from URLs containing these substrings
