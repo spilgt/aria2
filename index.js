@@ -44,7 +44,7 @@ bot.onText(/^\/source/, (msg) => {
   if (msgTools.isAuthorized(msg) < 0) {
     sendUnauthorizedMessage(msg);
   } else {
-    sendMessage(msg, 'You can find my source code here : https://github.com/Yash-Garg/telegram-drive-bot');
+    sendMessage(msg, 'You can find my source code here : https://github.com/therealme1/aria2');
   }
 });
 
