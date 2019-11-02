@@ -157,4 +157,4 @@ If `successful` is false, any or all of the fields of `file` might be absent. Ho
 ### License
 The MIT License (MIT)
 
-Copyright © 2019 Yash Garg
+Copyright © 2019 Amit Pandey
