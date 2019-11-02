@@ -57,7 +57,7 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 2. Run `npm install`
 
-3. Configure the aria2 startup script: <b>YOU Can skip this ive alreday done it</b>
+3. Configure the aria2 startup script: 
 
    * `nano aria.sh`
    * `ARIA_RPC_SECRET` (defined in line 1) is the secret (password) used to connect to aria2. Set this to whatever you want, and save the file with `ctrl + x`.
@@ -106,12 +106,12 @@ After the above installation is done you will see the bot running...now lets mak
 This is a description of the fields in .constants.js:
 
 * `TOKEN`: This is the Telegram bot token that you will get from Botfather in step 1 of Pre-installation.
-* `ARIA_SECRET`: This is the password used to connect to the aria2 RPC. You will get this from step 4 of Installation.
+* `ARIA_SECRET`: This is the password used to connect to the aria2 RPC. You will get this from step 3 of Installation.
 * `ARIA_DOWNLOAD_LOCATION`: This is the directory that aria2 will download files into, before uploading them. Make sure that there is no trailing "/" in this path. The suggested path is `/path/to/aria-telegram-mirror-bot/downloads`
 * `ARIA_DOWNLOAD_LOCATION_ROOT`: This is the mountpoint that contains ARIA_DOWNLOAD_LOCATION. This is used internally to calculate the space available before downloading.
 * `ARIA_FILTERED_DOMAINS`: The bot will refuse to download files from these domains. Can be an empty list.
 * `ARIA_FILTERED_FILENAMES`: The bot will refuse to completely download (or if already downloaded, then upload) files with any of these substrings in the file/top level directory name. Can be an empty list or left undefined.
-* `GDRIVE_PARENT_DIR_ID`: This is the ID of the Google Drive folder that files will be uploaded into. You will get this from step 4 of Pre-installation.
+* `GDRIVE_PARENT_DIR_ID`: This is the ID of the Google Drive folder that files will be uploaded into. You will get this from step 5 of Pre-installation.
 * `SUDO_USERS`: This is a list of Telegram user IDs. These users can use the bot in any chat. Can be an empty list, if AUTHORIZED_CHATS is not empty.
 * `AUTHORIZED_CHATS`:<b>THIS FUNCTION NEEDS TO BE REPAIRED SO PUT ANYTHING ON THIS!!!!!! IT WONT WORK</b>  This is a list of Telegram Chat IDs. Anyone in these chats can use the bot in that particular chat. Anyone not in one of these chats and not in SUDO_USERS cannot use the bot. Someone in one of the chats in this list can use the bot only in that chat, not elsewhere. Can be an empty list, if SUDO_USERS is not empty.
 * `DOWNLOAD_NOTIFY_TARGET`: The fields here are used to notify an external web server once a download is complete. See the [section below](#Notifying-an-external-webserver-on-download-completion) for details.
