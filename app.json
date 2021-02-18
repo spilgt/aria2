@@ -7,13 +7,12 @@
     "scalpel"
   ],
   "website": "https://google.com/",
-  "repository": "https://github.com/therealme1/aria2",
+  "repository": "https://github.com/spilgt/aria2",
   "logo": "https://small-sharp-tool.com/logo.svg",
   "success_url": "/welcome",
   "env": {
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
-      "generator": "env"
     }
   },
   "formation": {
