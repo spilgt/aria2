@@ -1,6 +1,6 @@
 # telegram-drive-bot
 
-This is a Telegram bot that uses [aria2](https://github.com/aria2/aria2) to download files over BitTorrent / HTTP(S) and uploads them to your Google Drive. This can be useful for downloading from slow servers. There are some features to try to reduce piracy.
+This is a Telegram bot that uses [aria2](https://github.com/spilgt/aria2) to download files over BitTorrent / HTTP(S) and uploads them to your Google Drive. This can be useful for downloading from slow servers. There are some features to try to reduce piracy.
 
 # Deploy to Heroku
 
@@ -32,7 +32,7 @@ There is little preventing users from using this to mirror pirated content. Henc
 
 3. Add the bot to your groups and optionally, give it the permission to delete messages. This permission is used to clean up status request messages from users. Not granting it will quickly fill the chat with useless messages from users.
 
-4. Install [aria2](https://github.com/aria2/aria2).
+4. Install [aria2](https://github.com/spilgt/aria2).
    * For Ubuntu:
      `sudo apt install aria2 node.js npm`
     * For Termux:
@@ -51,7 +51,7 @@ There is little preventing users from using this to mirror pirated content. Henc
 1. Clone the repo:
 
    ```bash
-   git clone https://github.com/therealme1/aria2
+   git clone https://github.com/spilgt/aria2
    cd aria2
    ```
 
